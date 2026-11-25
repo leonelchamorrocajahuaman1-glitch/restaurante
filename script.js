@@ -831,6 +831,25 @@ function initCredits() {
 }
 
 /* ---------------------------------------------------------
+   12. FOTOS NO DISPONIBLES
+   Si una imagen no carga, se muestra un recuadro en lugar de un ícono roto.
+   --------------------------------------------------------- */
+function markMissing(img) {
+  img.classList.add("is-missing");
+  const box = img.parentElement;
+  if (box && !box.classList.contains("has-missing")) {
+    box.classList.add("has-missing");
+    box.setAttribute("data-missing", "Foto pendiente");
+  }
+}
+document.addEventListener("error", (e) => {
+  if (e.target.tagName === "IMG") markMissing(e.target);
+}, true);
+function checkImages() {
+  $$("img").forEach((img) => { if (img.complete && img.naturalWidth === 0 && img.getAttribute("src")) markMissing(img); });
+}
+
+/* ---------------------------------------------------------
    INICIO
    --------------------------------------------------------- */
 document.addEventListener("DOMContentLoaded", () => {
@@ -846,4 +865,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initParallax();
   initForm();
   initCredits();
+  checkImages();
 });
+window.addEventListener("load", checkImages);
