@@ -29,7 +29,9 @@ const PHOTOS = {
   "cuy-chavin": { file: "Picante de cuy en Chavín.jpg", author: "Cbrescia", license: "CC BY-SA 4.0", place: "Chavín de Huántar (Áncash)" },
   "yuca": { file: "Mandioca", url: "https://flickr.com/photo.gne?id=28223600369", author: "Codevasf", license: "CC BY 2.0", place: "Brasil (misma raíz que la yuca peruana)" },
   "platano": { file: "Mercado Minorista de Pucallpa plátano.jpg", author: "Aulaverde", license: "CC BY-SA 4.0", place: "Mercado de Pucallpa (Ucayali)" },
-  "cocona": { file: "Cocona.JPG", author: "Dtarazona", license: "Dominio público", place: "Perú" },
+  "cocona": { file: "Frutas de la amazonía. Aguaje y cocona.", url: "https://flickr.com/photo.gne?id=6138515838", author: "Supayfotos / APEGA", license: "CC BY-NC-SA 2.0", place: "Cocona y aguaje, frutas amazónicas" },
+  "mercado-san-pedro": { file: "Mercado San Pedro", url: "https://flickr.com/photo.gne?id=16731536204", author: "Mariano Mantel", license: "CC BY-NC 2.0", place: "Mercado de San Pedro, Cusco" },
+  "ollas-huancayo": { file: "Huancayo - Caldo de Cordero", url: "https://flickr.com/photo.gne?id=4175499833", author: "luhram", license: "CC BY-NC-SA 2.0", place: "Huancayo (Junín)" },
   "paisajes-huanuco": { file: "Huanuco, Peru", url: "https://flickr.com/photo.gne?id=3501375637", author: "One Laptop per Child", license: "CC BY 2.0", place: "Región Huánuco" },
   "tingo-maria": { file: "Tingo María, ciudad en el río Huallaga.jpg", author: "Tessio-777", license: "CC BY-SA 4.0", place: "Tingo María, Leoncio Prado (Huánuco)" },
   "pachamanca-tierra": { file: "Pachamanca in Peru.jpg", author: "Unukorno", license: "CC BY 3.0", place: "Perú" },
@@ -276,12 +278,12 @@ const GALLERY = [
   { photo: "pachahorno", cat: "Cocinas tradicionales", title: "Armando el horno de piedras" },
   { photo: "papas-expo", cat: "Ferias y exposiciones", title: "Exposición de papas nativas peruanas" },
   { photo: "preparando-tacacho", cat: "Preparación", title: "Machacando el plátano para el tacacho" },
-  { photo: "cocinera-chicha", cat: "Cocinas tradicionales", title: "Cocinera de chicha de jora" },
+  { photo: "ollas-huancayo", cat: "Cocinas tradicionales", title: "Ollas de caldo de cordero y de gallina a la leña" },
   { photo: "mercado-viejo", cat: "Mercados tradicionales", title: "Mercado Viejo de Huánuco" },
   { photo: "tacacho-iquitos", cat: "Platos típicos", title: "Tacacho con cecina" },
   { photo: "aji-amarillo-fruto", cat: "Ingredientes regionales", title: "Ají amarillo" },
   { photo: "humita-dulce", cat: "Platos típicos", title: "Humita dulce" },
-  { photo: "mercado-viejo-interior-2", cat: "Mercados tradicionales", title: "Puestos del Mercado Viejo" },
+  { photo: "mercado-san-pedro", cat: "Mercados tradicionales", title: "Mercado de San Pedro" },
   { photo: "negritos", cat: "Fiestas tradicionales", title: "Máscara de la danza de los Negritos de Huánuco" }
 ];
 
@@ -823,7 +825,11 @@ function initForm() {
    --------------------------------------------------------- */
 function initCredits() {
   const list = $("#credits");
-  list.innerHTML = Object.values(PHOTOS).map((p) =>
+  const used = new Set([
+    ...DISHES.map((d) => d.photo), ...INGREDIENTS.map((i) => i.photo), ...GALLERY.map((g) => g.photo),
+    ...$$("img").map((img) => (img.getAttribute("src") || "").replace(IMG, "").replace(".jpg", ""))
+  ]);
+  list.innerHTML = Object.entries(PHOTOS).filter(([k]) => used.has(k)).map(([, p]) =>
     `<li><a href="${sourceUrl(p)}" target="_blank" rel="noopener">${esc(p.file)}</a> — ${esc(p.author)} · ${esc(p.license)} · ${esc(p.place)} · ${sourceName(p)}</li>`
   ).join("");
   const btn = $("#creditsToggle");
