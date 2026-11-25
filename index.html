@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sabores de Huánuco — Experiencia gastronómica</title>
+  <meta name="description" content="Sabores de Huánuco: descubre los platos típicos, ingredientes y la cultura gastronómica andina y amazónica del departamento de Huánuco, Perú.">
+  <meta name="theme-color" content="#174B35">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Fraunces:ital,opsz,wght@1,9..144,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='16' fill='%23174B35'/%3E%3Cpath d='M8 21h4v-4h4v-4h4v4h4v4' fill='none' stroke='%23D6A64F' stroke-width='2.4'/%3E%3C/svg%3E">
+</head>
+<body>
+
+  <a class="skip-link" href="#platos">Saltar a los platos</a>
+
+  <!-- ============ NAVEGACIÓN ============ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#inicio" class="brand" aria-label="Sabores de Huánuco, ir al inicio">
+        <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true">
+          <circle cx="20" cy="20" r="20" fill="currentColor"/>
+          <path d="M9 27h6v-6h5v-6h5v6h6v6" fill="none" stroke="#D6A64F" stroke-width="2.6" stroke-linejoin="miter"/>
+          <circle cx="20" cy="10" r="2.2" fill="#D6A64F"/>
+        </svg>
+        <span class="brand__text">sabores<br><b>de huánuco</b></span>
+      </a>
+
+      <nav class="menu" id="menu" aria-label="Principal">
+        <ul class="menu__list">
+          <li><a href="#inicio" class="menu__link is-active">Inicio</a></li>
+          <li><a href="#nosotros" class="menu__link">Nosotros</a></li>
+          <li><a href="#platos" class="menu__link">Platos típicos</a></li>
+          <li><a href="#ingredientes" class="menu__link">Ingredientes</a></li>
+          <li><a href="#galeria" class="menu__link">Galería</a></li>
+          <li><a href="#contacto" class="menu__link menu__link--pill">Contáctanos</a></li>
+        </ul>
+      </nav>
+
+      <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="inicio">
+      <div class="hero__copy">
+        <p class="eyebrow reveal">Huánuco · Perú · Andes y Amazonía</p>
+        <h1 class="hero__title reveal">
+          <span class="line">El auténtico</span>
+          <span class="line">sabor de</span>
+          <span class="line line--accent">Huánuco</span>
+        </h1>
+        <p class="hero__lead reveal">Descubre una gastronomía llena de historia, tradición y sabores que representan nuestra tierra.</p>
+        <div class="hero__actions reveal">
+          <a href="#platos" class="btn btn--gold">Descubrir platos <span aria-hidden="true">→</span></a>
+          <a href="#cultura" class="btn btn--outline">Conocer nuestra cultura</a>
+        </div>
+        <p class="hero__slogan reveal"><em>“Una tierra de sabores, una tradición que nos une”</em></p>
+      </div>
+
+      <div class="hero__media">
+        <figure class="hero__photo">
+          <img src="assets/img/pachamanca-panao.jpg" alt="Pachamanca de cerdo con papas y camote servida en Panao, provincia de Pachitea, Huánuco" fetchpriority="high">
+          <figcaption>Pachamanca de cerdo · Panao, Pachitea</figcaption>
+        </figure>
+        <div class="hero__badge" aria-hidden="true">
+          <svg viewBox="0 0 200 200">
+            <defs><path id="circlePath" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+            <text><textPath href="#circlePath">Sabores de Huánuco · Tradición · Tierra · Fuego ·</textPath></text>
+          </svg>
+          <span class="hero__badge-core">
+            <svg viewBox="0 0 40 40"><path d="M6 30h7v-7h7v-7h7v7h7v7" fill="none" stroke="currentColor" stroke-width="2.6"/></svg>
+          </span>
+        </div>
+        <figure class="hero__mini">
+          <img src="assets/img/juane.jpg" alt="Juane envuelto en hoja de bijao, plato de la Amazonía peruana">
+        </figure>
+      </div>
+
+      <a href="#ticker" class="hero__scroll" aria-label="Seguir bajando"><span></span></a>
+    </section>
+
+    <!-- ============ TICKER ============ -->
+    <div class="ticker" id="ticker" aria-hidden="true">
+      <div class="ticker__track">
+        <span>Pachamanca</span><i></i><span>Picante de cuy</span><i></i><span>Locro de gallina</span><i></i><span>Juane</span><i></i><span>Tacacho con cecina</span><i></i><span>Chicharrón con mote</span><i></i><span>Caldo verde</span><i></i><span>Humitas</span><i></i><span>Sopa de cushuro</span><i></i><span>Mazamorra de calabaza</span><i></i>
+        <span>Pachamanca</span><i></i><span>Picante de cuy</span><i></i><span>Locro de gallina</span><i></i><span>Juane</span><i></i><span>Tacacho con cecina</span><i></i><span>Chicharrón con mote</span><i></i><span>Caldo verde</span><i></i><span>Humitas</span><i></i><span>Sopa de cushuro</span><i></i><span>Mazamorra de calabaza</span><i></i>
+      </div>
+    </div>
+
+    <!-- ============ NOSOTROS ============ -->
+    <section class="about band band--sage" id="nosotros">
+      <div class="container about__grid">
+        <div class="about__text">
+          <p class="eyebrow reveal">Nosotros</p>
+          <h2 class="display reveal">La tradición se sirve en cada plato</h2>
+          <p class="lead reveal">Huánuco reúne en un solo territorio las punas altoandinas, los valles templados del Huallaga y la selva alta. Esa geografía explica una cocina que pasa del fogón de leña y la tierra caliente de la pachamanca a la hoja de bijao del juane.</p>
+
+          <div class="about__points">
+            <article class="point reveal">
+              <h3>Costumbre</h3>
+              <p>Muchos platos se preparan para compartir: faenas comunales, fiestas patronales, mercados de domingo y reuniones familiares.</p>
+            </article>
+            <article class="point reveal">
+              <h3>Productos de la tierra</h3>
+              <p>Papa, maíz, ajíes, hierbas aromáticas, yuca y plátano marcan la despensa de la región según la altitud.</p>
+            </article>
+            <article class="point reveal">
+              <h3>Herencia</h3>
+              <p>Las recetas viajan de generación en generación: se aprenden mirando, probando y cocinando en familia.</p>
+            </article>
+          </div>
+
+          <dl class="stats reveal">
+            <div><dt>11</dt><dd>provincias</dd></div>
+            <div><dt>2</dt><dd>grandes paisajes: Andes y Amazonía</dd></div>
+            <div><dt>10</dt><dd>platos para descubrir</dd></div>
+          </dl>
+        </div>
+
+        <div class="about__media reveal">
+          <figure class="photo photo--tall">
+            <img src="assets/img/mercado-viejo-puesto.jpg" alt="Puesto de comida en el Mercado Viejo de la ciudad de Huánuco" loading="lazy">
+            <figcaption>Puesto de comida en el Mercado Viejo de Huánuco</figcaption>
+          </figure>
+          <div class="about__stamp" aria-hidden="true">
+            <span>Desde el</span>
+            <strong>mercado</strong>
+            <span>hasta la mesa</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PLATOS ============ -->
+    <section class="dishes" id="platos">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow reveal">Platos típicos</p>
+            <h2 class="display reveal">Diez sabores,<br><span class="accent-serif">una tierra</span></h2>
+          </div>
+          <p class="section-head__note reveal">
+            Ninguno de estos platos es exclusivo de Huánuco: varios comparten raíz con otras regiones andinas o amazónicas del Perú. Cada ficha indica si el plato tiene <strong>fuerte arraigo huanuqueño</strong> o si es <strong>compartido</strong>, y en qué zona de la región se encuentra.
+          </p>
+        </div>
+
+        <div class="filters reveal" role="tablist" aria-label="Filtrar platos por categoría">
+          <button class="filter is-active" role="tab" aria-selected="true" data-filter="todos">Todos <sup data-count="todos"></sup></button>
+          <button class="filter" role="tab" aria-selected="false" data-filter="andes">Andinos <sup data-count="andes"></sup></button>
+          <button class="filter" role="tab" aria-selected="false" data-filter="amazonia">Amazónicos <sup data-count="amazonia"></sup></button>
+          <button class="filter" role="tab" aria-selected="false" data-filter="sopas">Sopas y caldos <sup data-count="sopas"></sup></button>
+          <button class="filter" role="tab" aria-selected="false" data-filter="maiz">Maíz y dulces <sup data-count="maiz"></sup></button>
+        </div>
+
+        <div class="dish-grid" id="dishGrid" aria-live="polite">
+          <!-- Las tarjetas se generan desde script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ INGREDIENTES ============ -->
+    <section class="ingredients band band--sand" id="ingredientes">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow reveal">Ingredientes</p>
+            <h2 class="display reveal">La despensa<br><span class="accent-serif">de dos mundos</span></h2>
+          </div>
+          <p class="section-head__note reveal">De las chacras altoandinas a las huertas de la selva alta: los productos que sostienen la cocina regional.</p>
+        </div>
+
+        <div class="ing-grid" id="ingGrid">
+          <!-- Generado desde script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CULTURA ============ -->
+    <section class="culture" id="cultura">
+      <div class="container">
+        <div class="culture__intro">
+          <p class="eyebrow reveal">Cultura gastronómica</p>
+          <h2 class="display reveal">Del frío de la puna<br>al calor del Huallaga</h2>
+          <p class="lead reveal">En Huánuco, la altitud cambia el plato. A medida que se desciende de las alturas hacia la selva, cambian los cultivos, las técnicas y las costumbres de mesa.</p>
+        </div>
+
+        <!-- Perfil de altitud decorativo -->
+        <div class="altitude reveal" aria-hidden="true">
+          <svg viewBox="0 0 1200 180" preserveAspectRatio="none">
+            <path class="altitude__fill" d="M0,40 C120,20 220,30 300,50 C420,80 480,70 560,95 C680,130 760,120 860,140 C960,155 1080,160 1200,165 L1200,180 L0,180 Z"/>
+            <path class="altitude__line" d="M0,40 C120,20 220,30 300,50 C420,80 480,70 560,95 C680,130 760,120 860,140 C960,155 1080,160 1200,165"/>
+          </svg>
+          <span style="left:6%">Puna y jalca</span>
+          <span style="left:42%">Valles interandinos</span>
+          <span style="left:80%">Selva alta</span>
+        </div>
+
+        <div class="zones">
+          <article class="zone reveal">
+            <span class="zone__num">01</span>
+            <h3>Alturas andinas</h3>
+            <p class="zone__where">Lauricocha, Yarowilca, Dos de Mayo, Huamalíes y zonas altas de otras provincias</p>
+            <p>Tierra de papas nativas, ocas, ollucos y pastos. En lagunas y bofedales se recolecta el cushuro. El frío invita a sopas espesas y caldos de hierbas.</p>
+            <ul class="tags"><li>Papa nativa</li><li>Cushuro</li><li>Caldo verde</li><li>Picante de cuy</li></ul>
+          </article>
+          <article class="zone reveal">
+            <span class="zone__num">02</span>
+            <h3>Valles interandinos</h3>
+            <p class="zone__where">Valle del Huallaga: Huánuco, Ambo y alrededores</p>
+            <p>Clima templado, maíz, frutales y caña de azúcar. Mercados y picanterías mantienen vivos el locro de gallina, el chicharrón con mote y la pachamanca de fiesta.</p>
+            <ul class="tags"><li>Maíz</li><li>Locro de gallina</li><li>Pachamanca</li><li>Humitas</li></ul>
+          </article>
+          <article class="zone reveal">
+            <span class="zone__num">03</span>
+            <h3>Selva alta</h3>
+            <p class="zone__where">Leoncio Prado (Tingo María), Puerto Inca y zonas bajas</p>
+            <p>El plátano y la yuca reemplazan a la papa; aparecen la hoja de bijao, la cecina ahumada y las frutas amazónicas como la cocona.</p>
+            <ul class="tags"><li>Plátano</li><li>Yuca</li><li>Juane</li><li>Tacacho con cecina</li></ul>
+          </article>
+        </div>
+
+        <div class="culture__photos">
+          <figure class="photo reveal">
+            <img src="assets/img/paisajes-huanuco.jpg" alt="Paisaje de montañas y valles en la región Huánuco" loading="lazy">
+            <figcaption>Paisajes de Huánuco</figcaption>
+          </figure>
+          <figure class="photo reveal">
+            <img src="assets/img/tingo-maria.jpg" alt="Ciudad de Tingo María junto al río Huallaga" loading="lazy">
+            <figcaption>Tingo María, junto al río Huallaga</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GALERÍA ============ -->
+    <section class="gallery band band--forest" id="galeria">
+      <div class="container">
+        <div class="section-head section-head--light">
+          <div>
+            <p class="eyebrow reveal">Galería</p>
+            <h2 class="display reveal">Fuego, mercado<br><span class="accent-serif">y cocina</span></h2>
+          </div>
+          <div class="carousel__controls reveal">
+            <span class="carousel__count" id="carouselCount">01 / 12</span>
+            <button class="round-btn" id="prevBtn" aria-label="Foto anterior">←</button>
+            <button class="round-btn" id="nextBtn" aria-label="Foto siguiente">→</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel reveal" id="carousel" aria-roledescription="carrusel" aria-label="Galería fotográfica">
+        <div class="carousel__track" id="carouselTrack">
+          <!-- Generado desde script.js -->
+        </div>
+      </div>
+      <div class="container">
+        <div class="carousel__progress"><span id="carouselBar"></span></div>
+        <p class="gallery__hint">Haz clic en una foto para verla en grande · Usa las flechas del teclado o desliza en el celular</p>
+      </div>
+    </section>
+
+    <!-- ============ DESTACADA ============ -->
+    <section class="feature" id="destacado">
+      <figure class="feature__bg">
+        <img src="assets/img/pachamanca-tierra.jpg" alt="Pachamanca recién destapada: los alimentos salen envueltos en hojas de la tierra caliente" loading="lazy">
+      </figure>
+      <div class="feature__content">
+        <p class="eyebrow eyebrow--light reveal">Pachamanca · comida de la tierra</p>
+        <h2 class="feature__title reveal">Huánuco, donde cada sabor <em>cuenta una historia</em></h2>
+        <p class="feature__text reveal">En quechua, <em>pacha</em> es tierra y <em>manka</em>, olla. Piedras calientes, hierbas, carnes y tubérculos se cubren con tierra y se destapan entre todos: una cocina que se vive en comunidad.</p>
+        <a href="#platos" class="btn btn--gold reveal" data-open-dish="pachamanca">Ver la pachamanca <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="feature__pattern" aria-hidden="true"></div>
+    </section>
+
+    <!-- ============ CONTACTO ============ -->
+    <section class="contact band band--sage" id="contacto">
+      <div class="container contact__grid">
+        <div class="contact__intro">
+          <p class="eyebrow reveal">Contáctanos</p>
+          <h2 class="display reveal">Comparte tu receta<br><span class="accent-serif">o tu historia</span></h2>
+          <p class="lead reveal">¿Conoces una preparación de tu provincia o una costumbre familiar? Escríbenos.</p>
+          <p class="contact__demo reveal">Página demostrativa: el formulario se valida en tu navegador, pero <strong>no envía datos a ningún servidor</strong>.</p>
+        </div>
+
+        <form class="form reveal" id="contactForm" novalidate>
+          <div class="field">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" autocomplete="name" placeholder="Tu nombre completo" required minlength="3">
+            <p class="field__error" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label for="correo">Correo electrónico</label>
+            <input type="email" id="correo" name="correo" autocomplete="email" placeholder="nombre@correo.com" required>
+            <p class="field__error" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntanos sobre tu plato favorito…" required minlength="10" maxlength="600"></textarea>
+            <div class="field__meta"><p class="field__error" aria-live="polite"></p><span class="field__count" id="msgCount">0 / 600</span></div>
+          </div>
+          <button type="submit" class="btn btn--forest btn--full">Enviar mensaje <span aria-hidden="true">→</span></button>
+
+          <div class="form__success" id="formSuccess" role="status" hidden>
+            <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22"/><path d="M14 25l7 7 13-15"/></svg>
+            <div>
+              <h3>¡Gracias, <span id="successName"></span>!</h3>
+              <p>Tu mensaje pasó la validación. Como esta es una página demostrativa sin servidor, <strong>no se ha enviado a ningún lugar</strong>.</p>
+              <button type="button" class="link-arrow" id="resetForm">Escribir otro mensaje →</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <p class="footer__big">Una tierra de sabores,<br><em>una tradición que nos une.</em></p>
+        <a href="#inicio" class="btn btn--gold">Volver al inicio ↑</a>
+      </div>
+      <div class="footer__cols">
+        <div>
+          <h4>Explorar</h4>
+          <ul>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#platos">Platos típicos</a></li>
+            <li><a href="#ingredientes">Ingredientes</a></li>
+            <li><a href="#cultura">Cultura gastronómica</a></li>
+            <li><a href="#galeria">Galería</a></li>
+            <li><a href="#contacto">Contáctanos</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Sobre este proyecto</h4>
+          <p>Sabores de Huánuco es una página demostrativa de difusión cultural. Los textos son divulgativos y no reemplazan una investigación histórica o antropológica.</p>
+        </div>
+        <div>
+          <h4>Fotografías</h4>
+          <p>Fotos reales de Wikimedia Commons, usadas según sus licencias libres. Cada pie de foto indica dónde fue tomada; no todas son de Huánuco.</p>
+          <button type="button" class="link-arrow link-arrow--light" id="creditsToggle" aria-expanded="false" aria-controls="credits">Ver créditos fotográficos →</button>
+        </div>
+      </div>
+      <ol class="credits" id="credits" hidden></ol>
+      <p class="footer__legal">© <span id="year"></span> Sabores de Huánuco · Proyecto demostrativo</p>
+    </div>
+  </footer>
+
+  <!-- ============ MODAL PLATO ============ -->
+  <div class="modal" id="dishModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal__backdrop" data-close></div>
+    <article class="modal__panel">
+      <button class="modal__close" data-close aria-label="Cerrar">✕</button>
+      <div class="modal__media" id="modalMedia"></div>
+      <div class="modal__body" id="modalBody"></div>
+    </article>
+  </div>
+
+  <!-- ============ LIGHTBOX ============ -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Foto ampliada" hidden>
+    <button class="lightbox__close" data-lb-close aria-label="Cerrar">✕</button>
+    <button class="lightbox__nav lightbox__nav--prev" id="lbPrev" aria-label="Foto anterior">←</button>
+    <figure class="lightbox__figure">
+      <img id="lbImg" src="" alt="">
+      <figcaption id="lbCaption"></figcaption>
+    </figure>
+    <button class="lightbox__nav lightbox__nav--next" id="lbNext" aria-label="Foto siguiente">→</button>
+  </div>
+
+  <!-- ============ VOLVER ARRIBA ============ -->
+  <button class="to-top" id="toTop" aria-label="Volver arriba">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
