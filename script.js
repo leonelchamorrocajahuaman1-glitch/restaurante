@@ -17,7 +17,7 @@ const PHOTOS = {
   "juane": { file: "Juane, plato emblema de la selva del Perú.jpg", author: "Neil Vega Murrieta", license: "CC BY-SA 2.0", place: "Selva del Perú" },
   "tacacho-cecina": { file: "Tacacho y cecina.jpg", author: "vivir_de_ilusiones", license: "CC BY 2.0", place: "Lima" },
   "chicharron-mote": { file: "ChicharronMote.JPG", author: "Dtarazona", license: "Dominio público", place: "Mercado Central de Huaraz (Áncash)" },
-  "caldo-verde": { file: "Caldo verde peru.jpg", author: "AgainErick", license: "CC BY-SA 4.0", place: "Perú" },
+  "caldo-verde": { file: "EL YACUCHUPE O YACUCHUPI O CHUPE VERDE, Sopa Inca", url: "https://flickr.com/photo.gne?id=30475227896", author: "Usuario de Flickr 134894678@N07", license: "Dominio público (PDM)", place: "Perú" },
   "mazamorra-calabaza": { file: "Mazamorra de calabaza.JPG", author: "Dtarazona", license: "Dominio público", place: "Perú" },
   "humitas": { file: "humita", url: "https://flickr.com/photo.gne?id=25832455744", author: "leobenavente", license: "CC BY-NC-ND 2.0", place: "Lugar no indicado" },
   "cushuro": { file: "Cushuro en Huaraz.jpg", author: "Cbrescia", license: "CC BY-SA 4.0", place: "Mercado de Huaraz (Áncash)" },
@@ -179,6 +179,7 @@ const DISHES = [
     id: "caldo-verde",
     name: "Caldo verde",
     photo: "caldo-verde",
+    photoNote: "Foto referencial: muestra un yacuchupe o chupe verde, sopa andina muy parecida al caldo verde, no la misma receta.",
     cats: ["andes", "sopas"],
     zone: "Alturas andinas",
     origin: "compartido",
@@ -328,6 +329,7 @@ function renderDishes() {
            <span class="dish__num">${String(i + 1).padStart(2, "0")}</span>
            <span class="dish__badge ${d.origin === "arraigo" ? "dish__badge--root" : ""}">${esc(d.originLabel)}</span>
            <span class="dish__zone">${esc(d.zone)}</span>
+           ${d.photoNote ? `<span class="dish__ref" title="${esc(d.photoNote)}">Foto referencial</span>` : ""}
          </button>`
       : `<div class="dish__media-wrap" style="position:relative">
            ${noPhotoBlock(d)}
