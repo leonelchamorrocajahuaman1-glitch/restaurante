@@ -16,16 +16,17 @@ const PHOTOS = {
   "picante-de-cuy": { file: "PicantedeCuy.JPG", author: "Dtarazona", license: "Dominio público", place: "Mercado Central de Huaraz (Áncash)" },
   "juane": { file: "Juane, plato emblema de la selva del Perú.jpg", author: "Neil Vega Murrieta", license: "CC BY-SA 2.0", place: "Selva del Perú" },
   "tacacho-cecina": { file: "Tacacho y cecina.jpg", author: "vivir_de_ilusiones", license: "CC BY 2.0", place: "Lima" },
-  "chicharron-mote": { file: "ChicharronMote.JPG", author: "Dtarazona", license: "Dominio público", place: "Mercado Central de Huaraz (Áncash)" },
+  "chicharron-mote": { file: "Imagen enviada por el propietario del proyecto", url: "https://chatgpt.com/s/i_6b0772eb63b88191b3171a86eb4e49a5", user: true, author: "Autor no identificado", license: "Licencia no verificada", place: "Lugar no indicado" },
   "caldo-verde": { file: "EL YACUCHUPE O YACUCHUPI O CHUPE VERDE, Sopa Inca", url: "https://flickr.com/photo.gne?id=30475227896", author: "Usuario de Flickr 134894678@N07", license: "Dominio público (PDM)", place: "Perú" },
-  "mazamorra-calabaza": { file: "Mazamorra de calabaza.JPG", author: "Dtarazona", license: "Dominio público", place: "Perú" },
+  "mazamorra-calabaza": { file: "Imagen enviada por el propietario del proyecto", url: "https://chatgpt.com/s/i_6b077316c42c8191a2a9d4c1772d2805", user: true, author: "Autor no identificado", license: "Licencia no verificada", place: "Lugar no indicado" },
+  "locro-de-gallina": { file: "Imagen enviada por el propietario del proyecto", url: "https://chatgpt.com/s/i_6b07730c6624819183005f77ba6d897e", user: true, author: "Autor no identificado", license: "Licencia no verificada", place: "Lugar no indicado" },
   "humitas": { file: "humita", url: "https://flickr.com/photo.gne?id=25832455744", author: "leobenavente", license: "CC BY-NC-ND 2.0", place: "Lugar no indicado" },
-  "cushuro": { file: "Cushuro en Huaraz.jpg", author: "Cbrescia", license: "CC BY-SA 4.0", place: "Mercado de Huaraz (Áncash)" },
+  "cushuro": { file: "Imagen enviada por el propietario del proyecto", url: "https://chatgpt.com/s/i_6b07730016048191898b15363267662e", user: true, author: "Autor no identificado", license: "Licencia no verificada", place: "Lugar no indicado" },
   "mercado-viejo-puesto": { file: "Puesto de comida en el mercado Viejo de Huánuco.jpg", author: "Carlo Brescia", license: "CC BY-SA 4.0", place: "Mercado Viejo, ciudad de Huánuco" },
-  "papas-nativas": { file: "Papas Nativas.jpg", author: "Davidsuna", license: "CC BY-SA 4.0", place: "Sierra peruana" },
+  "papas-nativas": { file: "Imagen enviada por el propietario del proyecto", url: "https://chatgpt.com/s/i_6b0773689e0881918420db5d12c721a7", user: true, author: "Autor no identificado", license: "Licencia no verificada", place: "Lugar no indicado" },
   "maiz": { file: "Mote [cereals]", url: "https://flickr.com/photo.gne?id=13984294622", author: "Rocco Lucia", license: "CC BY 2.0", place: "Maíz tostado (cancha) · lugar no indicado" },
-  "aji-amarillo": { file: "Aji amarillo expo.jpg", author: "MiguelAlanCS", license: "CC BY-SA 4.0", place: "Perú" },
-  "huacatay": { file: "Tagetes minuta flower.jpg", author: "Arthur Chapman", license: "CC BY 2.0", place: "Queensland, Australia (misma especie)" },
+  "aji-amarillo": { file: "Imagen enviada por el propietario del proyecto", url: "https://chatgpt.com/s/i_6b0773689e0881918420db5d12c721a7", user: true, author: "Autor no identificado", license: "Licencia no verificada", place: "Lugar no indicado" },
+  "huacatay": { file: "Imagen enviada por el propietario del proyecto", url: "https://chatgpt.com/s/i_6b0773689e0881918420db5d12c721a7", user: true, author: "Autor no identificado", license: "Licencia no verificada", place: "Lugar no indicado" },
   "cuy-chavin": { file: "Picante de cuy en Chavín.jpg", author: "Cbrescia", license: "CC BY-SA 4.0", place: "Chavín de Huántar (Áncash)" },
   "yuca": { file: "Mandioca", url: "https://flickr.com/photo.gne?id=28223600369", author: "Codevasf", license: "CC BY 2.0", place: "Brasil (misma raíz que la yuca peruana)" },
   "platano": { file: "Mercado Minorista de Pucallpa plátano.jpg", author: "Aulaverde", license: "CC BY-SA 4.0", place: "Mercado de Pucallpa (Ucayali)" },
@@ -33,7 +34,7 @@ const PHOTOS = {
   "mercado-san-pedro": { file: "Mercado San Pedro", url: "https://flickr.com/photo.gne?id=16731536204", author: "Mariano Mantel", license: "CC BY-NC 2.0", place: "Mercado de San Pedro, Cusco" },
   "ollas-huancayo": { file: "Huancayo - Caldo de Cordero", url: "https://flickr.com/photo.gne?id=4175499833", author: "luhram", license: "CC BY-NC-SA 2.0", place: "Huancayo (Junín)" },
   "paisajes-huanuco": { file: "Huanuco, Peru", url: "https://flickr.com/photo.gne?id=3501375637", author: "One Laptop per Child", license: "CC BY 2.0", place: "Región Huánuco" },
-  "tingo-maria": { file: "Tingo María, ciudad en el río Huallaga.jpg", author: "Tessio-777", license: "CC BY-SA 4.0", place: "Tingo María, Leoncio Prado (Huánuco)" },
+  "tingo-maria": { file: "Imagen enviada por el propietario del proyecto", url: "https://chatgpt.com/s/i_6b077355b24481919c4af577e6d63049", user: true, author: "Autor no identificado", license: "Licencia no verificada", place: "Selva alta, lugar no verificado" },
   "pachamanca-tierra": { file: "Pachamanca in Peru.jpg", author: "Unukorno", license: "CC BY 3.0", place: "Perú" },
   "pachamanca-casera": { file: "Pachamanca underground barbecue lunch", url: "https://flickr.com/photo.gne?id=45060427701", author: "Bex Walton", license: "CC BY 2.0", place: "Orilla de un lago altoandino" },
   "pachahorno": { file: "Pachamanca", url: "https://flickr.com/photo.gne?id=45060395041", author: "Bex Walton", license: "CC BY 2.0", place: "Orilla de un lago altoandino" },
@@ -44,14 +45,15 @@ const PHOTOS = {
   "cocinera-chicha": { file: "Cocinera de Chicha.jpg", author: "Elianturlione3", license: "CC BY-SA 4.0", place: "Perú" },
   "papas-expo": { file: "Exposición de papas nativas peruanas en la UNMSM.jpg", author: "Eclipxstical", license: "CC BY-SA 4.0", place: "UNMSM, Lima" },
   "tacacho-iquitos": { file: "Tacacho con cecina.jpg", author: "Mayimbú", license: "CC BY-SA 4.0", place: "Iquitos (Loreto)" },
-  "humita-dulce": { file: "Humita dulce preparado en Huancayo.jpg", author: "Johann Wilde Huaman Ricaldi", license: "CC BY-SA 4.0", place: "Huancayo (Junín)" },
+  "preparando-humitas": { file: "Imagen enviada por el propietario del proyecto", url: "https://chatgpt.com/s/i_6b07737ab79c819182039da84209b352", user: true, author: "Autor no identificado", license: "Licencia no verificada", place: "Lugar no indicado" },
+  "mercado-tradicional": { file: "Imagen enviada por el propietario del proyecto", url: "https://chatgpt.com/s/i_6b0773242e008191a35164d3e9e2c6cf", user: true, author: "Autor no identificado", license: "Licencia no verificada", place: "Lugar no verificado" },
   "aji-amarillo-fruto": { file: "Ají amarillo.jpg", author: "Soderomekvatorn", license: "CC BY-SA 4.0", place: "Lugar no indicado" },
   "negritos": { file: "Negrito de Huánuco (Danzante)", url: "https://flickr.com/photo.gne?id=30583304204", author: "Thomas Flores", license: "CC BY-SA 2.0", place: "Huánuco" }
 };
 
 const commonsUrl = (file) => "https://commons.wikimedia.org/wiki/File:" + encodeURIComponent(file.replace(/ /g, "_"));
 const sourceUrl = (p) => p.url || commonsUrl(p.file);
-const sourceName = (p) => p.url ? "Flickr" : "Wikimedia Commons";
+const sourceName = (p) => p.user ? "imagen enviada vía ChatGPT" : p.url ? "Flickr" : "Wikimedia Commons";
 
 /* Platos típicos.
    origin: "arraigo"  → plato con fuerte presencia y tradición en Huánuco (no exclusivo)
@@ -101,7 +103,7 @@ const DISHES = [
   {
     id: "locro-de-gallina",
     name: "Locro de gallina",
-    photo: null,
+    photo: "locro-de-gallina",
     cats: ["andes", "sopas"],
     zone: "Valles interandinos",
     origin: "arraigo",
@@ -116,7 +118,7 @@ const DISHES = [
       "Se termina con hierbas frescas picadas y se sirve con la presa de gallina."
     ],
     history: "La palabra ‘locro’ proviene del quechua (ruqru) y nombra a guisos espesos presentes en varios países andinos.",
-    originText: "Se le reconoce como uno de los platos tradicionales de la ciudad de Huánuco, pero el nombre ‘locro’ se usa en muchas regiones de los Andes para recetas distintas. No contamos con una fotografía verificada de este plato, por eso no mostramos una imagen."
+    originText: "Se le reconoce como uno de los platos tradicionales de la ciudad de Huánuco, pero el nombre ‘locro’ se usa en muchas regiones de los Andes para recetas distintas. La imagen fue enviada por el propietario del proyecto; su autor y lugar no están verificados."
   },
   {
     id: "juane",
@@ -202,6 +204,7 @@ const DISHES = [
     id: "mazamorra-de-calabaza",
     name: "Mazamorra de calabaza",
     photo: "mazamorra-calabaza",
+    photoNote: "Foto referencial: muestra los ingredientes (calabaza, chancaca, clavo de olor y canela), no el postre servido.",
     cats: ["maiz"],
     zone: "Andes · valles",
     origin: "compartido",
@@ -242,7 +245,6 @@ const DISHES = [
     id: "sopa-de-cushuro",
     name: "Sopa de cushuro",
     photo: "cushuro",
-    photoNote: "La foto muestra el cushuro fresco (ingrediente), no la sopa servida.",
     cats: ["andes", "sopas"],
     zone: "Alturas andinas",
     origin: "compartido",
@@ -274,15 +276,10 @@ const INGREDIENTS = [
 
 const GALLERY = [
   { photo: "pachamanca-casera", cat: "Preparación", title: "Preparando la pachamanca junto al lago" },
-  { photo: "mercado-viejo-interior", cat: "Mercados tradicionales", title: "Interior del Mercado Viejo" },
   { photo: "pachahorno", cat: "Cocinas tradicionales", title: "Armando el horno de piedras" },
-  { photo: "papas-expo", cat: "Ferias y exposiciones", title: "Exposición de papas nativas peruanas" },
-  { photo: "preparando-tacacho", cat: "Preparación", title: "Machacando el plátano para el tacacho" },
   { photo: "ollas-huancayo", cat: "Cocinas tradicionales", title: "Ollas de caldo de cordero y de gallina a la leña" },
-  { photo: "mercado-viejo", cat: "Mercados tradicionales", title: "Mercado Viejo de Huánuco" },
   { photo: "tacacho-iquitos", cat: "Platos típicos", title: "Tacacho con cecina" },
-  { photo: "aji-amarillo-fruto", cat: "Ingredientes regionales", title: "Ají amarillo" },
-  { photo: "humita-dulce", cat: "Platos típicos", title: "Humita dulce" },
+  { photo: "preparando-humitas", cat: "Preparación", title: "Envolviendo humitas en panca" },
   { photo: "mercado-san-pedro", cat: "Mercados tradicionales", title: "Mercado de San Pedro" },
   { photo: "negritos", cat: "Fiestas tradicionales", title: "Máscara de la danza de los Negritos de Huánuco" }
 ];
