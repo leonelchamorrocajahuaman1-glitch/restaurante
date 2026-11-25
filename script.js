@@ -23,14 +23,14 @@ const PHOTOS = {
   "cushuro": { file: "Cushuro en Huaraz.jpg", author: "Cbrescia", license: "CC BY-SA 4.0", place: "Mercado de Huaraz (Áncash)" },
   "mercado-viejo-puesto": { file: "Puesto de comida en el mercado Viejo de Huánuco.jpg", author: "Carlo Brescia", license: "CC BY-SA 4.0", place: "Mercado Viejo, ciudad de Huánuco" },
   "papas-nativas": { file: "Papas Nativas.jpg", author: "Davidsuna", license: "CC BY-SA 4.0", place: "Sierra peruana" },
-  "maiz": { file: "Maíz morado con blanco.jpg", author: "Mario Hdez Hdez", license: "CC BY-SA 4.0", place: "Lugar no indicado" },
+  "maiz": { file: "Mote [cereals]", url: "https://flickr.com/photo.gne?id=13984294622", author: "Rocco Lucia", license: "CC BY 2.0", place: "Maíz tostado (cancha) · lugar no indicado" },
   "aji-amarillo": { file: "Aji amarillo expo.jpg", author: "MiguelAlanCS", license: "CC BY-SA 4.0", place: "Perú" },
   "huacatay": { file: "Tagetes minuta flower.jpg", author: "Arthur Chapman", license: "CC BY 2.0", place: "Queensland, Australia (misma especie)" },
   "cuy-chavin": { file: "Picante de cuy en Chavín.jpg", author: "Cbrescia", license: "CC BY-SA 4.0", place: "Chavín de Huántar (Áncash)" },
   "yuca": { file: "Yuca (Manihot esculenta).jpg", author: "Wilfredor", license: "CC0", place: "Lugar no indicado" },
   "platano": { file: "Mercado Minorista de Pucallpa plátano.jpg", author: "Aulaverde", license: "CC BY-SA 4.0", place: "Mercado de Pucallpa (Ucayali)" },
   "cocona": { file: "Cocona.JPG", author: "Dtarazona", license: "Dominio público", place: "Perú" },
-  "paisajes-huanuco": { file: "Paisajes de Huánuco.jpg", author: "YEDWARDDC", license: "CC BY 4.0", place: "Marabamba, Huánuco" },
+  "paisajes-huanuco": { file: "Huanuco, Peru", url: "https://flickr.com/photo.gne?id=3501375637", author: "One Laptop per Child", license: "CC BY 2.0", place: "Región Huánuco" },
   "tingo-maria": { file: "Tingo María, ciudad en el río Huallaga.jpg", author: "Tessio-777", license: "CC BY-SA 4.0", place: "Tingo María, Leoncio Prado (Huánuco)" },
   "pachamanca-tierra": { file: "Pachamanca in Peru.jpg", author: "Unukorno", license: "CC BY 3.0", place: "Perú" },
   "pachamanca-casera": { file: "Pachamanca casera.jpg", author: "MiguelAlanCS", license: "CC BY-SA 4.0", place: "Perú" },
@@ -44,10 +44,12 @@ const PHOTOS = {
   "tacacho-iquitos": { file: "Tacacho con cecina.jpg", author: "Mayimbú", license: "CC BY-SA 4.0", place: "Iquitos (Loreto)" },
   "humita-dulce": { file: "Humita dulce preparado en Huancayo.jpg", author: "Johann Wilde Huaman Ricaldi", license: "CC BY-SA 4.0", place: "Huancayo (Junín)" },
   "aji-amarillo-fruto": { file: "Ají amarillo.jpg", author: "Soderomekvatorn", license: "CC BY-SA 4.0", place: "Lugar no indicado" },
-  "caldo-verde-cajamarca": { file: "Caldo verde, Cajamarca 01.jpg", author: "Carlo Brescia", license: "CC BY-SA 4.0", place: "Cajamarca" }
+  "negritos": { file: "Negrito de Huánuco (Danzante)", url: "https://flickr.com/photo.gne?id=30583304204", author: "Thomas Flores", license: "CC BY-SA 2.0", place: "Huánuco" }
 };
 
 const commonsUrl = (file) => "https://commons.wikimedia.org/wiki/File:" + encodeURIComponent(file.replace(/ /g, "_"));
+const sourceUrl = (p) => p.url || commonsUrl(p.file);
+const sourceName = (p) => p.url ? "Flickr" : "Wikimedia Commons";
 
 /* Platos típicos.
    origin: "arraigo"  → plato con fuerte presencia y tradición en Huánuco (no exclusivo)
@@ -279,7 +281,7 @@ const GALLERY = [
   { photo: "aji-amarillo-fruto", cat: "Ingredientes regionales", title: "Ají amarillo" },
   { photo: "humita-dulce", cat: "Platos típicos", title: "Humita dulce" },
   { photo: "mercado-viejo-interior-2", cat: "Mercados tradicionales", title: "Puestos del Mercado Viejo" },
-  { photo: "caldo-verde-cajamarca", cat: "Platos típicos", title: "Caldo verde" }
+  { photo: "negritos", cat: "Fiestas tradicionales", title: "Máscara de la danza de los Negritos de Huánuco" }
 ];
 
 /* ---------------------------------------------------------
@@ -399,7 +401,7 @@ function openDish(id) {
 
   $("#modalMedia").innerHTML = p
     ? `<img src="${IMG}${d.photo}.jpg" alt="${esc(d.name)}">
-       <figcaption>${d.photoNote ? esc(d.photoNote) + " " : ""}Foto: ${esc(p.place)} · ${esc(p.author)} (${esc(p.license)}), Wikimedia Commons</figcaption>`
+       <figcaption>${d.photoNote ? esc(d.photoNote) + " " : ""}Foto: ${esc(p.place)} · ${esc(p.author)} (${esc(p.license)}), ${sourceName(p)}</figcaption>`
     : noPhotoBlock(d);
 
   const prev = DISHES[(idx - 1 + DISHES.length) % DISHES.length];
@@ -588,11 +590,13 @@ function showLightbox(i) {
   const g = GALLERY[lb.index];
   const p = PHOTOS[g.photo];
   const img = $("#lbImg");
+  img.classList.remove("is-missing");
+  img.parentElement.classList.remove("has-missing");
   img.style.animation = "none"; void img.offsetWidth; img.style.animation = "";
   img.src = `${IMG}${g.photo}.jpg`;
   img.alt = `${g.title} — ${p.place}`;
   $("#lbCaption").innerHTML = `<strong>${esc(g.title)}</strong> · ${esc(p.place)}
-    <small>${lb.index + 1} / ${GALLERY.length} · Foto: ${esc(p.author)} (${esc(p.license)}) · <a href="${commonsUrl(p.file)}" target="_blank" rel="noopener">Wikimedia Commons</a></small>`;
+    <small>${lb.index + 1} / ${GALLERY.length} · Foto: ${esc(p.author)} (${esc(p.license)}) · <a href="${sourceUrl(p)}" target="_blank" rel="noopener">${sourceName(p)}</a></small>`;
 }
 
 function openLightbox(i) {
@@ -818,7 +822,7 @@ function initForm() {
 function initCredits() {
   const list = $("#credits");
   list.innerHTML = Object.values(PHOTOS).map((p) =>
-    `<li><a href="${commonsUrl(p.file)}" target="_blank" rel="noopener">${esc(p.file)}</a> — ${esc(p.author)} · ${esc(p.license)} · ${esc(p.place)}</li>`
+    `<li><a href="${sourceUrl(p)}" target="_blank" rel="noopener">${esc(p.file)}</a> — ${esc(p.author)} · ${esc(p.license)} · ${esc(p.place)} · ${sourceName(p)}</li>`
   ).join("");
   const btn = $("#creditsToggle");
   btn.addEventListener("click", () => {
