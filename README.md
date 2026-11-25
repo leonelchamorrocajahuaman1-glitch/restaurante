@@ -39,3 +39,13 @@ assets/img/    Fotografías optimizadas
 Todas las fotos son reales y provienen de [Wikimedia Commons](https://commons.wikimedia.org), con licencias libres (dominio público, CC0, CC BY y CC BY-SA). Cada foto indica dónde fue tomada; varias no son de Huánuco (por ejemplo, Huaraz, Iquitos o Lima) y así se indica en la página.
 No encontramos una foto verificada del **locro de gallina**, así que su tarjeta usa un diseño tipográfico en lugar de una imagen que no corresponda.
 La lista completa de autores y licencias está en el pie de página (“Ver créditos fotográficos”) y en `script.js` (objeto `PHOTOS`).
+
+### Si faltan fotos
+
+Si alguna imagen de `assets/img/` no está, ejecuta desde la carpeta del proyecto:
+
+```
+python herramientas/descargar_fotos.py
+```
+
+El script descarga solo las fotos que faltan, en el tamaño adecuado, desde Wikimedia Commons.
